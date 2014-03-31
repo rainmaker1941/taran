@@ -1,0 +1,12 @@
+ <p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if shippers %}
+    <p>Found {{ shippers|length }} shippers{{ shippers|pluralize }}.</p>
+    <ul>
+        {% for shipper in shippers %}
+        <li>{{ shipper.Company_Name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No shippers matched your search criteria.</p>
+{% endif %}

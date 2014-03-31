@@ -1,0 +1,19 @@
+
+{% load render_table from django_tables2 %}
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}django_tables2/themes/paleblue/css/screen.css" />
+    </head>
+    <body>
+    	<form action="/search/" method="get">
+    		<br>
+	        <p>Company name = <input type="text" name="comp_name"></p> 
+	        <p>Zip code = <input type="text" name="zip_code"></p>
+	        <p>State = <input type="text" name="state"></p>
+	        <input type="submit" value="Search Shippers">
+	        <br>
+    	</form>
+        {% render_table table %}
+    </body>
+</html>

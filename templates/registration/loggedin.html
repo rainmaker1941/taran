@@ -1,0 +1,12 @@
+ <p>You are successfully logged in as a <strong>{{ user }}</strong></p>
+
+{% if shippers %}
+    <p>Found {{ shippers|length }} shippers{{ shippers|pluralize }}.</p>
+    <ul>
+        {% for shipper in shippers %}
+        <li>{{ shipper.Company_Name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>---------------------------------------------</p>
+{% endif %}
